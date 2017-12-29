@@ -1,0 +1,16 @@
+{
+    "name": "electron-basic-browserwindow-frameless",
+    "version": "1.0.0",
+    "description": "frameless window",
+    "main": "index.js",
+    "scripts": {
+        "start": "electron .",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "GPL3",
+    "devDependencies": {
+        "electron": "^1.7.6"
+    }
+}
