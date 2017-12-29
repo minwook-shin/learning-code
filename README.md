@@ -1,6 +1,8 @@
 # learn-code
 learned and practiced programming code (C++, Django, electron, Latex..ect.) 
 
+(기존 개별적으로 존재하던 저장소를 합쳤습니다.)
+
 ## learn-cpp
 learned and practiced c++
 
