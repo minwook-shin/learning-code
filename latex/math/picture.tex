@@ -1,0 +1,131 @@
+\documentclass{article}
+\usepackage{kotex}
+\begin{document}
+
+\setlength{\unitlength}{5cm} 
+\begin{picture}(1,1) 
+\put(0,0){\line(0,1){1}}
+\put(0,0){\vector(3,1){0.8}} 
+\put(0,0){\line(1,0){1}}
+\end{picture}
+
+\setlength{\unitlength}{1mm} 
+\begin{picture}(60, 40) 
+
+\put(20,30){\circle{32}}
+
+\put(40,30){\circle{14}}
+
+\put(35,10){\circle*{5}} 
+\end{picture}
+
+\setlength{\unitlength}{1cm} 
+\begin{picture}(6,5) 
+\thicklines 
+\put(1,0.5){\line(2,1){3}} 
+\put(4,2){\line(-2,1){2}} 
+\put(2,3){\line(-2,-5){1}} 
+
+\put(0.7,0.3){$A$} 
+\put(4.05,1.9){$B$} 
+\put(1.7,2.95){$C$} 
+
+\end{picture}
+
+\setlength{\unitlength}{2mm} 
+\begin{picture}(30,20) 
+\linethickness{0.075mm} 
+\multiput(0,0)(1,0){31}% 
+{\line(0,1){20}} 
+\multiput(0,0)(0,1){21}% 
+{\line(1,0){30}} 
+\linethickness{0.15mm} 
+\multiput(0,0)(5,0){7}% 
+{\line(0,1){20}} 
+\multiput(0,0)(0,5){5}% 
+{\line(1,0){30}} 
+\linethickness{0.3mm} 
+\multiput(5,0)(10,0){3}% 
+{\line(0,1){20}} 
+\multiput(0,5)(0,10){2}% 
+{\line(1,0){30}} 
+\end{picture}
+
+\setlength{\unitlength}{1cm} 
+\begin{picture}(6,4) 
+\linethickness{0.075mm} 
+\multiput(0,0)(1,0){7}% 
+{\line(0,1){4}} 
+\multiput(0,0)(0,1){5}% 
+{\line(1,0){6}} 
+\thicklines 
+\put(2,3){\oval(3,1.8)} 
+\thinlines \put(3,2){\oval(3,1.8)} 
+\thicklines 
+\put(2,1){\oval(3,1.8)[tl]} 
+\put(4,1){\oval(3,1.8)[b]} 
+\put(4,3){\oval(3,1.8)[r]} 
+\put(3,1.5){\oval(1.8,0.4)} 
+\end{picture}
+
+\setlength{\unitlength}{1cm} 
+\begin{picture}(6,4) 
+\linethickness{0.075mm} 
+\multiput(0,0)(1,0){7} {\line(0,1){4}} 
+\multiput(0,0)(0,1){5} {\line(1,0){6}} 
+\thicklines \put(0.5,0.5){\line(1,5){0.5}} 
+\put(1,3){\line(4,1){2}} 
+\qbezier(0.5,0.5)(1,3)(3,3.5) 
+\thinlines \put(2.5,2){\line(2,-1){3}} 
+\put(5.5,0.5){\line(-1,5){0.5}} 
+\linethickness{1mm} 
+\qbezier(2.5,2)(5.5,0.5)(5,3) 
+\thinlines 
+\qbezier(4,2)(4,3)(3,3) 
+\qbezier(3,3)(2,3)(2,2) 
+\qbezier(2,2)(2,1)(3,1) 
+\qbezier(3,1)(4,1)(4,2) 
+\end{picture}
+
+\setlength{\unitlength}{1.3cm} 
+\begin{picture}(4.3,3.6)(-2.5,-0.25) 
+\put(-2,0){\vector(1,0){4.4}} 
+\put(2.45,-.05){$x$} 
+\put(0,0){\vector(0,1){3.2}} 
+\put(0,3.35){\makebox(0,0){$y$}} 
+\qbezier(0.0,0.0)(1.2384,0.0) (2.0,2.7622) 
+\qbezier(0.0,0.0)(-1.2384,0.0) (-2.0,2.7622) 
+\linethickness{.075mm} 
+\multiput(-2,0)(1,0){5} {\line(0,1){3}} 
+\multiput(-2,0)(0,1){4} {\line(1,0){4}} 
+\linethickness{.2mm} 
+\put( .3,.12763){\line(1,0){.4}} 
+\put(.5,-.07237){\line(0,1){.4}} 
+\put(-.7,.12763){\line(1,0){.4}} 
+\put(-.5,-.07237){\line(0,1){.4}} 
+\put(.8,.54308){\line(1,0){.4}} 
+\put(1,.34308){\line(0,1){.4}} 
+\put(-1.2,.54308){\line(1,0){.4}} 
+\put(-1,.34308){\line(0,1){.4}} 
+\put(1.3,1.35241){\line(1,0){.4}} 
+\put(1.5,1.15241){\line(0,1){.4}} 
+\put(-1.7,1.35241){\line(1,0){.4}} 
+\put(-1.5,1.15241){\line(0,1){.4}} 
+\put(-2.5,-0.25){\circle*{0.2}} 
+\end{picture}
+
+\setlength{\unitlength}{1cm} 
+\begin{picture}(6,4)(-3,-2) 
+\put(-2.5,0){\vector(1,0){5}} 
+\put(2.7,-0.1){$\chi$} 
+\put(0,-1.5){\vector(0,1){3}} 
+\multiput(-2.5,1)(0.4,0){13} {\line(1,0){0.2}} 
+\multiput(-2.5,-1)(0.4,0){13} {\line(1,0){0.2}} 
+\put(0.2,1.4) {$\beta=v/c=\tanh\chi$} 
+\qbezier(0,0)(0.8853,0.8853) (2,0.9640) 
+\qbezier(0,0)(-0.8853,-0.8853) (-2,-0.9640) 
+\put(-3,-2){\circle*{0.2}} 
+\end{picture}
+
+\end{document}}
+
