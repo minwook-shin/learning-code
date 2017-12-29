@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Title of the document</title>
+</head>
+
+<body>
+    <h2>The content of the document......</h2>
+    <button id="btn_hide">hide</button>
+    <script>
+        const {
+            remote
+        } = require('electron')
+        const btnhide = document.querySelector('#btn_hide')
+        btnhide.addEventListener('click', () => {
+            const win = remote.BrowserWindow.getGocusedWindow()
+            win.hide()
+        })
+    </script>
+</body>
+
+</html>

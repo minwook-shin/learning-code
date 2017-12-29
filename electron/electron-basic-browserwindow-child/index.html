@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Title of the document</title>
+</head>
+
+<body>
+    <h2>The content of the document......</h2>
+    <button id='btn_close'>close</button>
+    <script>
+        const {
+            remote
+        } = require('electron')
+        const btnclose = document.querySelector('#btn_close')
+        btnclose.addEventListener('click', () => {
+            const childWin = remote.getCurrentWindow();
+            childWin.hide()
+        })
+    </script>
+</body>
+
+</html>
