@@ -36,6 +36,9 @@ install-tl-advanced.bat --repository http://mirror.navercorp.com/CTAN/systems/te
 install-tl-windows.exe
 ```
 
+## learn-java
+learned and practiced java
+
 ## learning-electron
 learned and practiced electron
 
