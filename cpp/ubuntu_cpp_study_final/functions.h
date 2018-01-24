@@ -25,7 +25,6 @@ public:
 	string del_user;
 	int edit_score;
 	string str_score;
-
 	string print_all_info(int score, string name, string grade);
 	void enter_info();
 	void search_user();
@@ -34,7 +33,9 @@ public:
 	void print_user();
 	void sort_user();
 	int close_program();
-	int wellcome();;
+	string convert_grade(int score);
+	int wellcome();
+	string result;
 private:
 
 };

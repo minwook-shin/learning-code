@@ -89,7 +89,7 @@ void management::print_user()
 	cout << "전체 출력합니다." << endl;
 	for (int i = 0; i < user_info.size(); i++)
 	{
-		cout << print_all_info((int)user_score[i], (string)user_info[i], "A") << endl;
+		cout << print_all_info((int)user_score[i], (string)user_info[i], convert_grade((int)user_score[i])) << endl;
 	}
 }
 
@@ -110,9 +110,30 @@ int management::close_program()
 	ofstream files("save_user.txt");
 	cout << "종료하기 전에 파일에 저장하는 중입니다." << endl;
 	for (int i = 0; i <user_info.size(); i++) {
-		files << print_all_info((int)user_score[i], (string)user_info[i], "A") << "\n";
+		files << print_all_info((int)user_score[i], (string)user_info[i], convert_grade((int)user_score[i])) << "\n";
 	}
 	files.close();
 	exit(0);
 	return 0;
+}
+
+string management::convert_grade(int score)
+{
+	if (score >= 90)
+	{
+		result = "A+";
+	}
+	else if (90 > score >= 50)
+	{
+		result = "A";
+	}
+	else if (50 > score >= 20)
+	{
+		result = "B";
+	}
+	else 
+	{
+		result = "F";
+	}
+	return result;
 }
