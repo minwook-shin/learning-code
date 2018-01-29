@@ -46,6 +46,7 @@ void management::search_user()
 		if (find_user.find(user_info[i]) != string::npos)
 		{
 			cout << "찾았습니다!" << endl;
+			cout << print_all_info((int)user_score[i], (string)user_info[i], convert_grade((int)user_score[i])) << endl;
 		}
 	}
 }
@@ -123,11 +124,11 @@ string management::convert_grade(int score)
 	{
 		result = "A+";
 	}
-	else if (90 > score >= 50)
+	else if (90 >score&& score >= 50)
 	{
 		result = "A";
 	}
-	else if (50 > score >= 20)
+	else if (50 >score&&  score >= 20)
 	{
 		result = "B";
 	}
