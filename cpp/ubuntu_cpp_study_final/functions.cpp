@@ -1,5 +1,7 @@
 #include"functions.h"
 
+using namespace ubuntu_kr_cpp_study_final;
+
 management::management()
 {
 	cout << "생성자 호출" << endl;
@@ -61,7 +63,7 @@ void management::edit_user()
 		{
 			cout << "수정할 사람을 찾았습니다!" << endl;
 			user_score.erase(user_score.begin() + i);
-			cout << "어떻게 수정하실 예정인가요?" << endl;
+			cout << "어떻게 수정하실 예정인가요? : " << endl;
 			cin >> edit_score;
 			user_score.insert(user_score.begin() + i, (int)edit_score);
 			break;
@@ -87,7 +89,7 @@ void management::delete_user()
 
 void management::print_user()
 {
-	cout << "전체 출력합니다." << endl;
+	cout << "전체 목록을 출력합니다." << endl;
 	for (int i = 0; i < user_info.size(); i++)
 	{
 		cout << print_all_info((int)user_score[i], (string)user_info[i], convert_grade((int)user_score[i])) << endl;
@@ -114,6 +116,7 @@ int management::close_program()
 		files << print_all_info((int)user_score[i], (string)user_info[i], convert_grade((int)user_score[i])) << "\n";
 	}
 	files.close();
+	cout << "저장을 완료했습니다. 종료합니다." << endl;
 	exit(0);
 	return 0;
 }
@@ -138,3 +141,9 @@ string management::convert_grade(int score)
 	}
 	return result;
 }
+
+void management::test() 
+{
+	cout << "test" << endl;
+}
+
