@@ -2,7 +2,7 @@
 
 int main() 
 {
-	management main;
+	ubuntu_kr_cpp_study_final::management main;
 	
 	while (true)
 	{
