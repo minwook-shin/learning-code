@@ -36,7 +36,7 @@ func main() {
 	fmt.Println(i)
 	
 	c2 := make(chan int)
-	go ch(c2)
+	go ch2(c2)
 	fmt.Println(<- c2)
 	
 	c3 := make(chan int)
