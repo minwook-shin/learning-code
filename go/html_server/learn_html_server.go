@@ -1,30 +1,12 @@
 package main
 
 import (
-    "flag"
-    "html/template"
-    "log"
-    "net/http"
+	"flag"
+	"html/template"
+	"net/http"
 )
 
-var addr = flag.String("addr", ":8080", "http service address")
-
-var templ = template.Must(template.New("").Parse(templateStr))
-
-func main() {
-    flag.Parse()
-    http.Handle("/", http.HandlerFunc(index))
-    err := http.ListenAndServe(*addr, nil)
-    if err != nil {
-        log.Fatal("ListenAndServe:", err)
-    }
-}
-
-func index(w http.ResponseWriter, req *http.Request) {
-    templ.Execute(w, req)
-}
-
-const templateStr = `
+var templateStr = `
 <html>
 <head>
 <title>hello world</title>
@@ -34,3 +16,16 @@ const templateStr = `
 </body>
 </html>
 `
+
+var address = flag.String("addr", ":8080", "http service address")
+
+var templateParser = template.Must(template.New("").Parse(templateStr))
+
+func main() {
+	flag.Parse()
+	http.Handle("/", http.HandlerFunc(func (w http.ResponseWriter, req *http.Request)  {
+		templateParser.Execute(w, req)
+	}))
+
+	http.ListenAndServe(*address, nil)
+}
