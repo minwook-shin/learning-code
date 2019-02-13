@@ -1,0 +1,27 @@
+<html>
+
+<body>
+    <div id="app">
+        <test></test>
+        <local-test></local-test>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+        Vue.component("test", {
+            template: '<div>how to use?</div>'
+        });
+
+        var local = {
+            template: '<div>localllll!</div>'
+        };
+
+        new Vue({
+            components: {
+                'local-test': local
+            },
+            el: '#app',
+        })
+    </script>
+</body>
+
+</html>
