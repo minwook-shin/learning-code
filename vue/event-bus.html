@@ -1,0 +1,36 @@
+<html>
+
+<body>
+    <div id="app">
+        <child1></child1>
+        <child2></child2>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+        var bus = new Vue()
+
+        Vue.component("child1", {
+            template: "<p v-on:click = 'sender()'>click</p>",
+            methods: {
+                sender: function () {
+                    bus.$emit('first', 1)
+                }
+            }
+        });
+
+        Vue.component("child2", {
+            template: "<p></p>",
+            created() {
+                bus.$on('first', function (data) {
+                    console.log(data);
+                })
+            },
+        });
+
+        new Vue({
+            el: "#app"
+        });
+    </script>
+</body>
+
+</html>

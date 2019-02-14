@@ -1,0 +1,25 @@
+<html>
+
+<body>
+    <div id="app1">
+        <test v-bind:propprop="msg"></test>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+        Vue.component("test", {
+            props: ["propprop"],
+            template: '<div>{{propprop}}</div>'
+        });
+
+        new Vue({
+            el: "#app1",
+            data() {
+                return {
+                    msg: "hello, child"
+                }
+            },
+        })
+    </script>
+</body>
+
+</html>
