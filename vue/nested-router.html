@@ -1,0 +1,52 @@
+<html>
+
+<body>
+    <div id="app">
+        <router-link to="apple">apple</router-link>
+        <router-link to="google">google</router-link>
+        <router-view></router-view>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <script>
+        var apple = {
+            template: `<div>apple<router-view></router-view></div>`,
+        }
+        var google = {
+            template: `<div>google<router-view></router-view> </div>`
+        }
+
+        var iphone = {
+            template: "<div>iphone</div>"
+        }
+
+        var pixel = {
+            template: "<div>pixel</div>"
+        }
+
+        var routes = [{
+            path: "/apple",
+            component: apple,
+            children: [{
+                path: "",
+                component: iphone
+            }]
+        }, {
+            path: "/google",
+            component: google,
+            children: [{
+                path: "",
+                component: pixel,
+            }]
+        }]
+        const router = new VueRouter({
+            routes
+        })
+        new Vue({
+            router,
+            el: "#app",
+        })
+    </script>
+</body>
+
+</html>
