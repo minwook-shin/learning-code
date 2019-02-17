@@ -1,0 +1,34 @@
+<html>
+
+<body>
+    <div id="app1">
+        <test v-bind:prop="item" v-for="item in items" :key="item.id">
+            {{ item }}
+        </test>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+        Vue.component("test", {
+            props: ["prop"],
+            template: '<div>{{prop.text}}</div>'
+        });
+
+        new Vue({
+            el: "#app1",
+            data() {
+                return {
+                    msg: "hello, child",
+                    items: [{
+                        id: 0,
+                        text: "apple"
+                    }, {
+                        id: 1,
+                        text: "google"
+                    }],
+                }
+            },
+        })
+    </script>
+</body>
+
+</html>

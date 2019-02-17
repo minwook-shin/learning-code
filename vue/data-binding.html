@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <div id="app">
+        <h1>{{newData}}</h1>
+        <p v-bind:id="id"></p>
+
+        <button v-on:click="event">alert</button>
+
+        <div v-if="bool">
+            v-if...true!
+        </div>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                newData: 'new data',
+                id: 404,
+                bool: true
+            },
+            methods: {
+                event() {
+                    alert("hello, world!");
+                    this.newData = "atad wen"
+                }
+            }
+        });
+    </script>
+</body>
+
+
+
+</html>
