@@ -40,5 +40,6 @@
         "haskell": "runhaskell",
         "nim": "nim compile --verbosity:0 --hints:off --run",
         "lisp": "sbcl --script"
-    }
+    },
+    "python.linting.pylintEnabled": true
 }
