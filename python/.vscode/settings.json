@@ -41,5 +41,6 @@
         "nim": "nim compile --verbosity:0 --hints:off --run",
         "lisp": "sbcl --script"
     },
-    "python.linting.pylintEnabled": true
+    "python.linting.pylintEnabled": true,
+    "python.pythonPath": "/usr/local/bin/python3"
 }
