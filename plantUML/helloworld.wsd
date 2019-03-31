@@ -1,0 +1,10 @@
+@startuml helloworld
+left to right direction
+
+class Controller {
+    + Controller()
+    + push(): void
+}
+note right of Controller : hello,world!
+
+@enduml

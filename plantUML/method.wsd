@@ -1,0 +1,19 @@
+@startuml method
+
+Object <|-- ArrayList
+
+Object : equals()
+ArrayList : Object[] elementData
+ArrayList : size()
+
+Object2 <|-- ArrayList2
+
+class Object2 {
+    equals()
+}
+
+class ArrayList2 {
+    Object[] elementData
+    size ()
+}
+@enduml

@@ -1,0 +1,5 @@
+@startuml rel
+Class1 <|-- Class2 : extension
+Class3 *-- Class4 : composition
+Class5 o-- Class6 : aggregation
+@enduml
