@@ -1,0 +1,30 @@
+{% extends 'bootstrap4/bootstrap4.html' %}
+{% load bootstrap4 %}
+
+{% block bootstrap4_content %}
+    <div class="container">
+        <h1>{% block bootstrap4_title %}{% block title %}django-bootstrap4{% endblock %}{% endblock %}</h1>
+
+        <p>
+            <a href="{% url 'home' %}">home</a>
+        </p>
+
+        {% autoescape off %}{% bootstrap_messages %}{% endautoescape %}
+
+        {% block content %}
+            This is <em>bootstrap4</em> for <strong>Django</strong>.
+            {% bootstrap_button "Save" button_type="submit" button_class="btn-primary" %}
+        {% endblock %}
+
+    </div>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
