@@ -1,0 +1,16 @@
+@import "settings";
+
+div {
+    p { color: $bg;}
+  }
+
+div {
+    p { color: black; }
+}
+
+
+div { 
+    text: crypto(); 
+}
+
+div {}
