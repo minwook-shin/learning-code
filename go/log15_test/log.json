@@ -1,0 +1,2 @@
+{"context":"key/value","first":10,"lvl":"eror","msg":"Error msg","second":20,"t":"2019-09-19T21:03:43.565549+09:00","third":30}
+{"context":"key/value","first":10,"lvl":"crit","msg":"Crit msg","second":20,"t":"2019-09-19T21:03:43.565682+09:00","third":30}
