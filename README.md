@@ -6,6 +6,7 @@ learned and practiced programming code (C++, Django, electron, Latex..ect.)
 ## learn-python
 learned and practiced python
 
+<<<<<<< HEAD
 ## learn-go
 learned and practiced go
 
@@ -15,6 +16,8 @@ learned and practiced flutter
 ## learn-vue
 learned and practiced vue
 
+=======
+>>>>>>> 5f21b1acfec15f7f95675fe371e252453a9c590a
 ## learn-cpp
 learned and practiced c++
 
