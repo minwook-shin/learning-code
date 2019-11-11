@@ -19,6 +19,7 @@ func main() {
 		ID:       1,
 		Password: "0000",
 	}
+
 	contains = funk.Contains([]*test{testStruct}, testStruct)
 	fmt.Println(contains)
 	contains = funk.Contains([]*test{testStruct}, nil)
