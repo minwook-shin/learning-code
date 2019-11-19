@@ -40,12 +40,12 @@ func main() {
 		fmt.Println(err)
 	}
 
-	var test2 testInfo
-	err = db.One("Email", "test@example.com", &test2)
+	var testOne testInfo
+	err = db.One("Email", "test@example.com", &testOne)
 	if err != nil {
 		fmt.Println(err)
 	}
-	fmt.Println(test2)
+	fmt.Println(testOne)
 
 	err = db.Update(&testInfo{ID: 1, Email: "new@example.com"})
 	if err != nil {
