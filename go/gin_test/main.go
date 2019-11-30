@@ -94,9 +94,6 @@ func main() {
 	gin.DebugPrintRouteFunc = func(httpMethod, absolutePath, handlerName string, nuHandlers int) {
 		log.Printf("%v %v %v %v\n", httpMethod, absolutePath, handlerName, nuHandlers)
 	}
-	engine.GET("/status", func(c *gin.Context) {
-		c.JSON(http.StatusOK, "ok")
-	})
 
 	engine.Run(":8080")
 }
