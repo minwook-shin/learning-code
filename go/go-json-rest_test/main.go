@@ -34,5 +34,8 @@ func main() {
 	restAPI2.SetApp(restApp)
 	http.Handle("/api/", http.StripPrefix("/api", restAPI2.MakeHandler()))
 
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	err = http.ListenAndServe(":8080", nil)
+	if err != nil {
+		log.Fatal(err)
+	}
 }
